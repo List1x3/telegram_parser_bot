@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from aiogram.types import Message
 import json
 from utils.file_utils import download_json
-from sservices.basic_stats import calculate_basic
+from services.basic_stats import calculate_basic
 
 router = Router()
 
