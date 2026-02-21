@@ -8,5 +8,7 @@ async def download_json(message: Message) -> bytes:
     file_bytes = await message.bot.download_file(file.file_path)
     return file_bytes.read()
 
-async def generate_image_path():
-    pass
+def generate_image_path(prefix: str="img") -> str:
+    filename = f"{prefix}_{uuid.uuid4().hex}.png"
+    return os.path.join(IMAGES_DIR, filename) 
+    
